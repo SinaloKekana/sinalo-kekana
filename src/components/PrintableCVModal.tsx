@@ -8,6 +8,7 @@ import {
   Mail,
   MapPin,
   FileText,
+  Linkedin,
 } from 'lucide-react';
 import {
   achievementsData,
@@ -43,6 +44,7 @@ SINALO KEKANA
 Business Management Student / Graduate
 Location: Cape Town 7455
 Email: sinalokekana04@gmail.com
+LinkedIn: https://www.linkedin.com/in/sinalo-kekana-b97116249
 
 PROFESSIONAL SUMMARY
 ----------------------------------------------
@@ -221,6 +223,22 @@ DEVELOPED STRENGTHS
                     <Mail className="w-3.5 h-3.5 text-slate-900 shrink-0" />
                     <span>sinalokekana04@gmail.com</span>
                   </div>
+                  {contactInfo.linkedin && (
+                    <>
+                      <span>&bull;</span>
+                      <div className="flex items-center gap-1">
+                        <Linkedin className="w-3.5 h-3.5 text-[#0A66C2] shrink-0" />
+                        <a
+                          href={contactInfo.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-700 hover:underline"
+                        >
+                          linkedin.com/in/sinalo-kekana-b97116249
+                        </a>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
 

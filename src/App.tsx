@@ -12,7 +12,6 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { PrintableCVModal } from './components/PrintableCVModal';
 import { PhotoProvider } from './context/PhotoContext';
-import { PhotoUploaderModal } from './components/PhotoUploaderModal';
 import {
   achievementsData,
   contactInfo,
@@ -55,9 +54,6 @@ export default function App() {
           onClose={() => setIsCVModalOpen(false)}
         />
 
-        {/* Photo Uploader Modal */}
-        <PhotoUploaderModal />
-
         {/* =========================================================================
           DEDICATED PRINT-ONLY LAYOUT
           Automatically activates when user triggers browser print (Ctrl+P / Print)
@@ -79,6 +75,11 @@ export default function App() {
             <span>
               <strong>Email:</strong> {contactInfo.email}
             </span>
+            {contactInfo.linkedin && (
+              <span>
+                <strong>LinkedIn:</strong> linkedin.com/in/sinalo-kekana-b97116249
+              </span>
+            )}
           </div>
         </div>
 

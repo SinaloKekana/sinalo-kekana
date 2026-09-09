@@ -4,6 +4,8 @@ import {
   MapPin,
   FileText,
   ChevronUp,
+  Linkedin,
+  ExternalLink,
 } from 'lucide-react';
 import { contactInfo } from '../data/portfolioData';
 import { StarSparkle } from './EditorialDecorations';
@@ -63,23 +65,33 @@ export const Footer: React.FC<FooterProps> = ({ onOpenCVModal }) => {
                 </a>
               </li>
               <li>
+                <a href="#achievements" className="hover:text-[#D7CEC5] transition-colors">
+                  04. Credentials &amp; Certifications
+                </a>
+              </li>
+              <li>
+                <a href="#projects" className="hover:text-[#D7CEC5] transition-colors">
+                  05. Featured Projects
+                </a>
+              </li>
+              <li>
                 <a href="#skills" className="hover:text-[#D7CEC5] transition-colors">
-                  04. Skills &amp; Proficiencies
+                  06. Skills &amp; Proficiencies
                 </a>
               </li>
               <li>
                 <a href="#experience" className="hover:text-[#D7CEC5] transition-colors">
-                  05. Work &amp; Experience
+                  07. Work &amp; Experience
                 </a>
               </li>
               <li>
                 <a href="#strengths" className="hover:text-[#D7CEC5] transition-colors">
-                  06. Strengths &amp; Languages
+                  08. Strengths &amp; Languages
                 </a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-[#D7CEC5] transition-colors">
-                  07. Get In Touch
+                  09. Get In Touch
                 </a>
               </li>
             </ul>
@@ -104,6 +116,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenCVModal }) => {
                   {contactInfo.email}
                 </a>
               </li>
+              {contactInfo.linkedin && (
+                <li className="flex items-center gap-2">
+                  <Linkedin className="w-4 h-4 text-[#0A66C2]" />
+                  <a
+                    href={contactInfo.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#D7CEC5] transition-colors flex items-center gap-1"
+                  >
+                    <span>LinkedIn Profile</span>
+                    <ExternalLink className="w-3 h-3 opacity-60" />
+                  </a>
+                </li>
+              )}
             </ul>
 
             <div className="pt-2">

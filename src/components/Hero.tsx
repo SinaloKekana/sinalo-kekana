@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import {
   Mail,
@@ -7,7 +7,8 @@ import {
   Check,
   ArrowDown,
   FileText,
-  Upload,
+  Linkedin,
+  ArrowUpRight,
 } from 'lucide-react';
 import { contactInfo } from '../data/portfolioData';
 import { usePhoto } from '../context/PhotoContext';
@@ -19,32 +20,13 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenCVModal }) => {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const {
-    photoUrl,
-    updatePhotoFromFile,
-  } = usePhoto();
+  const { photoUrl } = usePhoto();
 
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2200);
-  };
-
-  const handleFrameDrop = async (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      await updatePhotoFromFile(e.dataTransfer.files[0]);
-    }
-  };
-
-  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      await updatePhotoFromFile(e.target.files[0]);
-    }
   };
 
   return (
@@ -134,70 +116,47 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCVModal }) => {
                   <Copy className="w-3 h-3 text-[#2E2824]/70" />
                 )}
               </button>
+
+              {contactInfo.linkedin && (
+                <a
+                  href={contactInfo.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2E2824]/10 border border-[#2E2824]/20 hover:bg-[#2E2824]/20 hover:text-[#0A66C2] transition-colors"
+                  title="Visit LinkedIn Profile"
+                >
+                  <Linkedin className="w-3.5 h-3.5 text-[#0A66C2]" />
+                  <span>LinkedIn</span>
+                  <ArrowUpRight className="w-3 h-3 opacity-70" />
+                </a>
+              )}
             </div>
           </div>
 
-          {/* Right Column: Framed Studio Portrait (Uncropped as it is) */}
+          {/* Right Column: Framed Studio Portrait */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end justify-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative w-full max-w-[320px] sm:max-w-[360px] group"
+              className="relative w-full max-w-[320px] sm:max-w-[360px]"
             >
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/png, image/jpeg, image/jpg, image/webp"
-                onChange={handleFileChange}
-                className="hidden"
-              />
-
-              {/* Outer frame displaying portrait cleanly as it is */}
-              <div
-                onDragOver={(e) => {
-                  e.preventDefault();
-                  setIsDragging(true);
-                }}
-                onDragLeave={() => setIsDragging(false)}
-                onDrop={handleFrameDrop}
-                onClick={() => fileInputRef.current?.click()}
-                className={`relative rounded-2xl overflow-hidden border-2 border-[#171412] bg-[#0c1424] shadow-2xl transition-all cursor-pointer ${
-                  isDragging
-                    ? 'ring-4 ring-[#171412] scale-[0.99] border-dashed'
-                    : 'hover:border-[#3D3631]'
-                }`}
-                title="Click or drop your photo file to update directly"
-              >
+              {/* Outer frame displaying portrait cleanly */}
+              <div className="relative rounded-2xl overflow-hidden border-2 border-[#171412] bg-[#0c1424] shadow-2xl">
                 <img
                   src={photoUrl}
                   alt="Sinalo Kekana"
                   className="w-full h-auto block"
                   referrerPolicy="no-referrer"
                 />
-
-                {/* Drag-over overlay */}
-                {isDragging && (
-                  <div className="absolute inset-0 bg-[#171412]/85 backdrop-blur-xs flex flex-col items-center justify-center text-[#D7CEC5] p-4 text-center z-30">
-                    <Upload className="w-8 h-8 mb-2 animate-bounce" />
-                    <p className="text-xs font-bold font-serif-title uppercase tracking-wider">
-                      Drop picture to set as photo
-                    </p>
-                  </div>
-                )}
               </div>
 
-              {/* Action bar below portrait */}
+              {/* Caption below portrait */}
               <div className="mt-3 flex items-center justify-between w-full text-xs text-[#5F564F]">
-                <button
-                  type="button"
-                  onClick={() => fileInputRef.current?.click()}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#2E2824]/10 hover:bg-[#2E2824]/20 text-[#171412] font-semibold transition-colors cursor-pointer"
-                >
-                  <Upload className="w-3.5 h-3.5" />
-                  <span>Upload / Replace Photo</span>
-                </button>
-                <span className="text-[11px] text-[#5F564F]">Original &bull; Uncropped</span>
+                <span className="font-serif-title uppercase tracking-wider text-[11px] font-bold text-[#171412]">
+                  Sinalo Kekana
+                </span>
+                <span className="text-[11px] text-[#5F564F]">Business Management &bull; Cape Town</span>
               </div>
             </motion.div>
           </div>
@@ -205,7 +164,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCVModal }) => {
 
         {/* Scroll cue indicator */}
         <div className="mt-8 pt-4 border-t border-[#2E2824]/20 flex items-center justify-between text-xs text-[#5F564F]">
-          <span>Portfolio Slide 01 / 07</span>
+          <span>Portfolio Slide 01 / 09</span>
           <a
             href="#about"
             className="flex items-center gap-1.5 hover:text-[#171412] transition-colors"

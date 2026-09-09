@@ -19,6 +19,7 @@ export const contactInfo: ContactInfo = {
   postalCode: '7455',
   country: 'South Africa',
   email: 'sinalokekana04@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/sinalo-kekana-b97116249',
   availability: 'Immediately Available for In-Service Training / Employment',
   willingness: 'Eager to learn, adapt quickly, and contribute to business operations.',
 };

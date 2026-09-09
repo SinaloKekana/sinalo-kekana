@@ -6,6 +6,7 @@ import {
   FileText,
   Mail,
   GraduationCap,
+  Linkedin,
 } from 'lucide-react';
 import { contactInfo } from '../data/portfolioData';
 import { StarSparkle } from './EditorialDecorations';
@@ -103,6 +104,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCVModal }) => {
             >
               <Mail className="w-4 h-4 text-[#D7CEC5]" />
             </a>
+
+            {contactInfo.linkedin && (
+              <a
+                href={contactInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-full bg-[#24201D] text-[#D7CEC5] hover:text-[#0A66C2] border border-[#3A332E] hover:bg-[#342E29] transition-colors"
+                title="LinkedIn Profile"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+            )}
           </div>
 
           {/* Mobile menu trigger */}
@@ -151,10 +164,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCVModal }) => {
                   setMobileMenuOpen(false);
                   onOpenCVModal();
                 }}
-                className="w-full py-2.5 rounded-xl bg-[#D7CEC5] text-[#171412] text-xs font-semibold text-center"
+                className="w-full py-2.5 rounded-xl bg-[#D7CEC5] text-[#171412] text-xs font-semibold text-center cursor-pointer"
               >
                 View Curriculum Vitae (Print/PDF)
               </button>
+
+              {contactInfo.linkedin && (
+                <a
+                  href={contactInfo.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full py-2.5 rounded-xl bg-[#24201D] text-[#D7CEC5] text-xs font-semibold text-center flex items-center justify-center gap-2 border border-[#3A332E]"
+                >
+                  <Linkedin className="w-3.5 h-3.5 text-[#0A66C2]" />
+                  <span>Connect on LinkedIn</span>
+                </a>
+              )}
             </div>
           </motion.div>
         )}

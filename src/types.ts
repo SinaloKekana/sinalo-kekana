@@ -10,6 +10,7 @@ export interface ContactInfo {
   phones?: string[];
   email: string;
   whatsappNumber?: string;
+  linkedin?: string;
   availability: string;
   willingness: string;
 }
