@@ -48,7 +48,11 @@ LinkedIn: https://www.linkedin.com/in/sinalo-kekana-b97116249
 
 PROFESSIONAL SUMMARY
 ----------------------------------------------
-Motivated and detail-oriented Business Management student recently completed N6 at the College of Cape Town. Passionate about administration, customer service, teamwork, and business operations. Strong communication and problem-solving skills with a willingness to learn and adapt quickly in professional environments. Seeking an opportunity to gain practical experience and contribute positively to a growing organisation.
+My name is SINALO KEKANA, a proactive and detail-oriented Business Management graduate with proven academic excellence (N6 completed at the College of Cape Town) and practical administrative competence. Skilled in office administration, scheduling, customer communication, facilities coordination, and official documentation. Adept at managing high-level tasks, streamlining workflows, and using digital tools to improve daily business operations. Proficient in Microsoft Office Suite, Google Workspace, and other digital productivity tools.
+
+I have a strong and growing interest in technology and the role it plays in modern business operations. I am particularly interested in artificial intelligence, digital transformation, business technology, IT support, and technology-driven solutions that improve efficiency and customer experiences. I am actively developing my knowledge of technology and enjoy learning how digital tools and AI can be applied to solve real-world business challenges.
+
+My combination of business management knowledge, administrative skills, digital proficiency, and interest in technology allows me to adapt to changing work environments and explore opportunities at the intersection of business and technology. Eager to continue learning, develop practical technical skills, and contribute to organisations that use technology and innovation to improve the way they work.
 
 EDUCATION
 ----------------------------------------------
@@ -247,9 +251,17 @@ DEVELOPED STRENGTHS
                 <h2 className="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2.5">
                   Professional Summary
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-800 leading-relaxed">
-                  Motivated and detail-oriented Business Management student recently completed N6 at the College of Cape Town. Passionate about administration, customer service, teamwork, and business operations. Strong communication and problem-solving skills with a willingness to learn and adapt quickly in professional environments. Seeking an opportunity to gain practical experience and contribute positively to a growing organisation.
-                </p>
+                <div className="text-xs sm:text-sm text-slate-800 leading-relaxed space-y-2">
+                  <p>
+                    My name is <strong>SINALO KEKANA</strong>, a proactive and detail-oriented Business Management graduate with proven academic excellence (<strong>N6 completed at the College of Cape Town</strong>) and practical administrative competence. Skilled in office administration, scheduling, customer communication, facilities coordination, and official documentation. Adept at managing high-level tasks, streamlining workflows, and using digital tools to improve daily business operations. Proficient in <strong>Microsoft Office Suite, Google Workspace, and other digital productivity tools</strong>.
+                  </p>
+                  <p>
+                    I have a strong and growing <strong>interest in technology and the role it plays in modern business operations</strong>. I am particularly interested in <strong>artificial intelligence, digital transformation, business technology, IT support, and technology-driven solutions</strong> that improve efficiency and customer experiences. I am actively developing my knowledge of technology and enjoy learning how digital tools and AI can be applied to solve real-world business challenges.
+                  </p>
+                  <p>
+                    My combination of <strong>business management knowledge, administrative skills, digital proficiency, and interest in technology</strong> allows me to adapt to changing work environments and explore opportunities at the intersection of <strong>business and technology</strong>. I am eager to continue learning, develop practical technical skills, and contribute to organisations that use technology and innovation to improve the way they work.
+                  </p>
+                </div>
               </div>
 
               {/* Education */}

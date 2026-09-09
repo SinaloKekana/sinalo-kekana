@@ -57,22 +57,28 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-6">
             
             {/* "About me" section */}
-            <div className="space-y-2">
+            <div className="space-y-3">
               <h3 className="text-base sm:text-lg font-bold font-serif-title text-[#171412]">
                 About me
               </h3>
               <p className="text-xs sm:text-sm md:text-[14.5px] text-[#2C2520] leading-relaxed font-normal">
-                My name is <strong className="text-[#171412] font-semibold">SINALO KEKANA</strong>, a proactive and detail-oriented Business Management graduate with proven academic excellence (N6 Completed at the College of Cape Town) and practical administrative competence. Skilled in office administration, scheduling, customer communications, and facilities coordination. Adept at managing high-level tasks, streamlining workflows, and handling official documentation with professionalism. Proficient in MS Office Suite, Google Workspace, and leveraging digital tools to optimize daily business operations.
+                My name is <strong className="text-[#171412] font-semibold">SINALO KEKANA</strong>, a proactive and detail-oriented Business Management graduate with proven academic excellence (<strong className="text-[#171412] font-semibold">N6 completed at the College of Cape Town</strong>) and practical administrative competence. Skilled in office administration, scheduling, customer communication, facilities coordination, and official documentation. Adept at managing high-level tasks, streamlining workflows, and using digital tools to improve daily business operations. Proficient in <strong className="text-[#171412] font-semibold">Microsoft Office Suite, Google Workspace, and other digital productivity tools</strong>.
+              </p>
+              <p className="text-xs sm:text-sm md:text-[14.5px] text-[#2C2520] leading-relaxed font-normal">
+                I have a strong and growing <strong className="text-[#171412] font-semibold">interest in technology and the role it plays in modern business operations</strong>. I am particularly interested in <strong className="text-[#171412] font-semibold">artificial intelligence, digital transformation, business technology, IT support, and technology-driven solutions</strong> that improve efficiency and customer experiences. I am actively developing my knowledge of technology and enjoy learning how digital tools and AI can be applied to solve real-world business challenges.
               </p>
             </div>
 
             {/* "Personal projects / Practical experience" section matching the reference */}
-            <div className="space-y-2 pt-2 border-t border-[#2E2824]/20">
+            <div className="space-y-3 pt-3 border-t border-[#2E2824]/20">
               <h3 className="text-base sm:text-lg font-bold font-serif-title text-[#171412]">
                 Practical Experience &amp; Competencies
               </h3>
               <p className="text-xs sm:text-sm md:text-[14.5px] text-[#2C2520] leading-relaxed font-normal">
-                Completed extensive academic training in Business Management alongside community-based event and facility coordination in Cape Town. Highlights include providing end-to-end administrative support, schedule coordination, visitor assistance, and managing logistics for special programs. These experiences reflect my ability to blend dependable administrative execution with courteous customer service, helping teams stay organized while delivering smooth, efficient results.
+                Completed extensive academic training in Business Management alongside community-based event and facility coordination in Cape Town. Highlights include providing end-to-end administrative support, schedule coordination, visitor assistance, and managing logistics for special programs. These experiences reflect my ability to combine dependable administrative execution with courteous customer service, helping teams stay organised while delivering smooth and efficient results.
+              </p>
+              <p className="text-xs sm:text-sm md:text-[14.5px] text-[#2C2520] leading-relaxed font-normal">
+                My combination of <strong className="text-[#171412] font-semibold">business management knowledge, administrative skills, digital proficiency, and interest in technology</strong> allows me to adapt to changing work environments and explore opportunities at the intersection of <strong className="text-[#171412] font-semibold">business and technology</strong>. I am eager to continue learning, develop practical technical skills, and contribute to organisations that use technology and innovation to improve the way they work.
               </p>
             </div>
 

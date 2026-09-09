@@ -26,11 +26,13 @@ export const contactInfo: ContactInfo = {
 
 export const professionalSummary = {
   primary:
-    'Motivated and detail-oriented Business Management student recently completed N6 at the College of Cape Town. Passionate about administration, customer service, teamwork, and business operations.',
+    'Proactive and detail-oriented Business Management graduate with proven academic excellence (N6 completed at the College of Cape Town) and practical administrative competence. Skilled in office administration, scheduling, customer communication, facilities coordination, and official documentation.',
+  technology:
+    'Strong and growing interest in technology, artificial intelligence, digital transformation, business technology, IT support, and technology-driven solutions that improve efficiency and customer experiences.',
   attributes:
-    'Strong communication and problem-solving skills with a willingness to learn and adapt quickly in professional environments.',
+    'Adept at managing high-level tasks, streamlining workflows, and using digital tools (Microsoft Office Suite, Google Workspace) to improve daily business operations.',
   objective:
-    'Seeking an opportunity to gain practical experience, undergo workplace experiential learning / in-service training, and contribute positively to a growing organisation.',
+    'Eager to explore opportunities at the intersection of business and technology, continue learning, develop practical technical skills, and contribute to organisations that use technology and innovation to improve the way they work.',
   pillars: [
     {
       title: 'Administration',
